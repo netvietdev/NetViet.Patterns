@@ -35,5 +35,13 @@ namespace NetViet.Patterns.Tests.Specification
             // Assert
             Assert.IsFalse(isSatisfied);
         }
+
+        [TestMethod]
+        public void YesSpecificationAlwaysPasses()
+        {
+            var spec = new YesSpecification<int>();
+            var result = spec.IsSatisfiedBy(1);
+            Assert.IsTrue(result);
+        }
     }
 }

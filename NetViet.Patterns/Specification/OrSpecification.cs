@@ -1,20 +1,22 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace NetViet.Patterns.Specification
 {
-    public class OrSpecification<T> : ISpecification<T>
+    public class OrSpecification<T> : GroupSpecification<T>
     {
-        private readonly IEnumerable<ISpecification<T>> _specifications;
-
-        public OrSpecification(IEnumerable<ISpecification<T>> specifications)
+        public OrSpecification(ISpecification<T> leftSpecification, ISpecification<T> rightSpecification)
+            : base(leftSpecification, rightSpecification)
         {
-            _specifications = specifications;
         }
 
-        public bool IsSatisfiedBy(T @object)
+        public OrSpecification(params ISpecification<T>[] specifications)
+            : base(specifications)
         {
-            return _specifications.Any(spec => spec.IsSatisfiedBy(@object));
+        }
+
+        public override bool IsSatisfiedBy(T @object)
+        {
+            return Specifications.Any(spec => spec.IsSatisfiedBy(@object));
         }
     }
 }

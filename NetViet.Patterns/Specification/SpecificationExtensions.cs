@@ -1,27 +1,15 @@
-﻿using System.Collections.Generic;
-
-namespace NetViet.Patterns.Specification
+﻿namespace NetViet.Patterns.Specification
 {
     public static class SpecificationExtensions
     {
         public static ISpecification<T> AndWith<T>(this ISpecification<T> specification, ISpecification<T> otherSpecification)
         {
-            var specifications = new List<ISpecification<T>>
-                {
-                    specification,
-                    otherSpecification
-                };
-            return new AndSpecification<T>(specifications);
+            return new AndSpecification<T>(specification, otherSpecification);
         }
 
         public static ISpecification<T> OrWith<T>(this ISpecification<T> specification, ISpecification<T> otherSpecification)
         {
-            var specifications = new List<ISpecification<T>>
-                {
-                    specification,
-                    otherSpecification
-                };
-            return new OrSpecification<T>(specifications);
+            return new OrSpecification<T>(specification, otherSpecification);
         }
 
         public static ISpecification<T> NotWith<T>(this ISpecification<T> specification, ISpecification<T> otherSpecification)

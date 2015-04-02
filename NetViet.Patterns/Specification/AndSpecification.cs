@@ -1,20 +1,22 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace NetViet.Patterns.Specification
 {
-    public class AndSpecification<T> : ISpecification<T>
+    public class AndSpecification<T> : GroupSpecification<T>
     {
-        private readonly IEnumerable<ISpecification<T>> _specifications;
-
-        public AndSpecification(IEnumerable<ISpecification<T>> specifications)
+        public AndSpecification(ISpecification<T> leftSpecification, ISpecification<T> rightSpecification)
+            : base(leftSpecification, rightSpecification)
         {
-            _specifications = specifications;
         }
 
-        public bool IsSatisfiedBy(T @object)
+        public AndSpecification(params ISpecification<T>[] specifications)
+            : base(specifications)
         {
-            return _specifications.All(spec => spec.IsSatisfiedBy(@object));
+        }
+
+        public override bool IsSatisfiedBy(T @object)
+        {
+            return Specifications.All(s => s.IsSatisfiedBy(@object));
         }
     }
 }
