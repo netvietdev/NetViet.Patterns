@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace NetViet.Patterns.Specification
+namespace Rabbit.Patterns.Specification
 {
     public class OrSpecification<T> : GroupSpecification<T>
     {

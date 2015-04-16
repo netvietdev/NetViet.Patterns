@@ -1,7 +1,7 @@
-﻿using NetViet.Patterns.Specification;
-using System;
+﻿using System;
+using Rabbit.Patterns.Specification;
 
-namespace NetViet.Patterns.ChainOfResp
+namespace Rabbit.Patterns.ChainOfResp
 {
     public abstract class HandlerBase<T> : IHandler<T>
     {

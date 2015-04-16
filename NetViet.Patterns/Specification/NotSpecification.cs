@@ -1,4 +1,4 @@
-﻿namespace NetViet.Patterns.Specification
+﻿namespace Rabbit.Patterns.Specification
 {
     public class NotSpecification<T> : ISpecification<T>
     {

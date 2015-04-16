@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50B8C8FB-3EB0-4E95-8210-D7A24B282C93}</ProjectGuid>
+    <ProjectGuid>{0514ADFF-2599-42B0-92F2-D08087D87335}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetViet.Patterns</RootNamespace>
-    <AssemblyName>NetViet.Patterns</AssemblyName>
+    <RootNamespace>Rabbit.Patterns.Tests</RootNamespace>
+    <AssemblyName>Rabbit.Patterns.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,23 +30,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChainOfResp\HandlerBase.cs" />
-    <Compile Include="ChainOfResp\IHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Specification\AndSpecification.cs" />
-    <Compile Include="Specification\GroupSpecification.cs" />
-    <Compile Include="Specification\NotSpecification.cs" />
-    <Compile Include="Specification\ISpecification.cs" />
-    <Compile Include="Specification\OrSpecification.cs" />
-    <Compile Include="Specification\SpecificationExtensions.cs" />
-    <Compile Include="Specification\YesSpecification.cs" />
+    <Compile Include="Specification\SpecificationTest.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\NetViet.Patterns\Rabbit.Patterns.csproj">
+      <Project>{50b8c8fb-3eb0-4e95-8210-d7a24b282c93}</Project>
+      <Name>Rabbit.Patterns</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

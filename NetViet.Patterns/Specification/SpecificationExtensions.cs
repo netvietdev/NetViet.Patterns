@@ -1,4 +1,4 @@
-﻿namespace NetViet.Patterns.Specification
+﻿namespace Rabbit.Patterns.Specification
 {
     public static class SpecificationExtensions
     {

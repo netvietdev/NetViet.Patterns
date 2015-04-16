@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetViet.Patterns", "NetViet.Patterns\NetViet.Patterns.csproj", "{50B8C8FB-3EB0-4E95-8210-D7A24B282C93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rabbit.Patterns", "NetViet.Patterns\Rabbit.Patterns.csproj", "{50B8C8FB-3EB0-4E95-8210-D7A24B282C93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetViet.Patterns.Tests", "NetViet.Patterns.Tests\NetViet.Patterns.Tests.csproj", "{0514ADFF-2599-42B0-92F2-D08087D87335}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rabbit.Patterns.Tests", "NetViet.Patterns.Tests\Rabbit.Patterns.Tests.csproj", "{0514ADFF-2599-42B0-92F2-D08087D87335}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Packager.NetViet.Patterns", "Packager.NetViet.Patterns\Packager.NetViet.Patterns.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Packager.Rabbit.Patterns", "Packager.NetViet.Patterns\Packager.Rabbit.Patterns.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

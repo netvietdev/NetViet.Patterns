@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NetViet.Patterns.Specification
+namespace Rabbit.Patterns.Specification
 {
     public abstract class GroupSpecification<T> : ISpecification<T>
     {

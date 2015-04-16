@@ -1,4 +1,4 @@
-﻿namespace NetViet.Patterns.ChainOfResp
+﻿namespace Rabbit.Patterns.ChainOfResp
 {
     public interface IHandler<T>
     {

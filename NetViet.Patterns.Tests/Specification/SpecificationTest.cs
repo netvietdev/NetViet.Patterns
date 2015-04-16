@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NetViet.Patterns.Specification;
+using Rabbit.Patterns.Specification;
 
-namespace NetViet.Patterns.Tests.Specification
+namespace Rabbit.Patterns.Tests.Specification
 {
     [TestClass]
     public class SpecificationTest
